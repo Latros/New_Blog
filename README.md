@@ -1,4 +1,3 @@
-New_Blog
-========
-
-New blog for http://samstil.es/
+# New_Blog
+ 
+a [Sails](http://sailsjs.org) application
