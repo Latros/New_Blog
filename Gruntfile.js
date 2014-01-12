@@ -29,7 +29,8 @@ module.exports = function (grunt) {
    */
 
   var cssFilesToInject = [
-    'linker/**/*.css'
+    'bower_components/bootstrap/dist/css/bootstrap.min.css',
+    'bower_components/bootstrap/dist/css/bootstrap-theme.min.css'
   ];
 
 
@@ -58,8 +59,16 @@ module.exports = function (grunt) {
 
     // *->    put other dependencies here   <-*
 
+    'bower_components/jquery/jquery.min.js',
+
     // All of the rest of your app scripts imported here
-    'linker/**/*.js'
+    'linker/**/*.js',
+
+    'bower_components/modernizr/modernizr.js',
+
+    'bower_components/timeago/jquery.timeago.js',
+
+    'bower_components/less/dist/less-1.6.1.min.js'
   ];
 
 
