@@ -4,7 +4,7 @@ div.alert-success {
     margin: 0 auto 20px auto;
 }
 
-.links a {
+.links a, .about a, .contact a {
     text-decoration: underline !important;
 }
 
@@ -149,18 +149,17 @@ section.blog-list {
             box-shadow: #fff 0 0 0 5px;
         }
 
-        div.image-container {
+        div.image-container, div.image_container {
             text-align: center;
 
-            a {
-                img {
-                    max-width: 60%;
-                    border-radius: 5px;
-                    -webkit-box-shadow: 0 8px 6px -6px #0089d0;
-                    -moz-box-shadow: 0 8px 6px -6px #0089d0;
-                    box-shadow: 0 8px 6px -6px #0089d0;
-                }
+            img {
+                max-width: 60%;
+                border-radius: 5px;
+                -webkit-box-shadow: 0 8px 6px -6px #0089d0;
+                -moz-box-shadow: 0 8px 6px -6px #0089d0;
+                box-shadow: 0 8px 6px -6px #0089d0;
             }
+
             span {
                 position: relative;
                 font-weight: 200;
@@ -185,6 +184,8 @@ section.blog-list {
             font-size: 16px;
             line-height: 25px;
             letter-spacing: 0.5px;
+            font-weight: 200;
+            margin: 20px 0;
 
             span {
                 display: inline-block;

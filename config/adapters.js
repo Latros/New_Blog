@@ -28,6 +28,15 @@ module.exports.connections = {
     ssl: {
       rejectUnauthorized: false
     }
+  },
+
+  local_pg: {
+    adapter: 'sails-postgresql',
+    host: 'localhost',
+    port: '5432',
+    user: 'Laptros',
+    password: '12341234',
+    database: 'newblogdev'
   }
 
 };
@@ -36,5 +45,5 @@ module.exports.connections = {
  * Default database for all model storage (possible to override in models specifically, see docs)
  */
 module.exports.model = {
-  connections: [ 'save_to_postgresql' ]
+  connections: [ 'local_pg' ]
 };
