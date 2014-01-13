@@ -11,7 +11,8 @@ module.exports = {
 
         title: {
             type: 'STRING',
-            required: true
+            required: true,
+            unique: true
         },
 
         content: {
@@ -31,7 +32,8 @@ module.exports = {
 
         slug: {
             type: 'STRING',
-            required: true
+            required: true,
+            unique: true
         }
 
 	},

@@ -9,7 +9,7 @@ module.exports = {
 
     homepage : function ( req, res ) {
 
-        Post.find().sort('createdAt').exec( function ( err, posts ){
+        Post.find().limit(5).sort('createdAt').exec( function foundPosts ( err, posts ){
 
             res.locals.posts = posts.reverse();
 
@@ -18,12 +18,28 @@ module.exports = {
         });
     },
 
-    category: function ( req, res ) {
-        res.view('category');
+    read : function ( req, res ) {
+        Post.find({
+            where: {
+                slug: req.param('slug')
+            }
+        }).exec( function foundPost ( err, posts ) {
+            res.locals.posts = posts;
+            res.view('read')
+        });
     },
 
-    read : function ( req, res ) {
-        console.log('asdf');
+    category : function ( req, res ) {
+        Post.find({
+            sort: 'createdAt',
+            where: {
+                category: req.param('category')
+            }
+        }).exec( function foundPosts ( err, posts ) {
+            res.locals.posts = posts.reverse();
+            res.locals.category = req.param('category');
+            res.view('homepage');
+        });
     }
   
 };
