@@ -6,7 +6,7 @@
   "dependencies": {
     "sails": "git://github.com/balderdashy/sails.git#v0.10",
     "sails-disk": "git://github.com/balderdashy/sails-disk.git#associations",
-    "sails-postgresql": "~0.9.3"
+    "sails-postgresql": "~0.9.3",
     "ejs": "0.8.4",
     "grunt": "0.4.1"
   },
