@@ -20,5 +20,8 @@
   "license": "",
   "engines": {
     "node": "0.10.x"
+  },
+  "devDependencies": {
+    "sails-postgresql": "~0.9.3"
   }
 }
