@@ -18,19 +18,19 @@ module.exports.connections = {
     adapter: 'sails-disk'
   },
 
-  save_to_postgresql: {
+  save_to_heroku_postgresql: {
     adapter   : 'sails-postgresql',
-    host      : process.env.PG_HOSTNAME || 'localhost',
-    port      : process.env.PG_PORT || '5432',
-    user      : process.env.PG_USER || 'Laptros',
-    password  : process.env.PG_PASSWORD || '12341234',
-    database  : process.env.PG_DATABASE || 'newblogdev',
+    host      : process.env.PG_HOSTNAME,
+    port      : process.env.PG_PORT,
+    user      : process.env.PG_USER,
+    password  : process.env.PG_PASSWORD,
+    database  : process.env.PG_DATABASE,
     ssl: {
       rejectUnauthorized: false
     }
   },
 
-  local_pg: {
+  save_to_local_pg: {
     adapter: 'sails-postgresql',
     host: 'localhost',
     port: '5432',
@@ -45,5 +45,5 @@ module.exports.connections = {
  * Default database for all model storage (possible to override in models specifically, see docs)
  */
 module.exports.model = {
-  connections: [ 'local_pg' ]
+  connections: [ 'save_to_heroku_postgresql' ]
 };
