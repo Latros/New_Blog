@@ -7,7 +7,7 @@
 
 module.exports = {
 
-    list : function ( req, res ) {
+    homepage : function ( req, res ) {
 
         Post.find().sort('createdAt').exec( function ( err, posts ){
 
@@ -23,7 +23,7 @@ module.exports = {
     },
 
     read : function ( req, res ) {
-        res.view('read');
+        console.log('asdf');
     }
   
 };

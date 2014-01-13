@@ -27,8 +27,25 @@ module.exports = {
         category: {
             type: 'STRING',
             required: true
+        },
+
+        slug: {
+            type: 'STRING',
+            required: true
         }
 
-	}
+	},
+
+    beforeValidation: function ( inputtedValues, next ) {
+
+        // Silly SLUG generation... TODO: find better rexep :P
+        inputtedValues.slug = inputtedValues.title
+                                .replace(',','')
+                                .replace('-','')
+                                .replace(/\W/g,'-')
+                                .replace('--','-')
+                                .toLowerCase();
+        next();
+    }
 
 };

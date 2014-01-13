@@ -1,9 +1,9 @@
 <% _.each(posts, function(post) { %>
 
 <div class="post">
-    <span class="date">Posted <abbr class="timeago" title="<%= post.createdAt %>"></abbr></span>
-    <h3><a href="#"><%= post.title %></a></h3>
-    <p><%- post.content.split(" ").splice(0,1).join(" ") %> <span><a href="#">... read more</a></span></p>
+    <span class="date">Posted <abbr class="timeago" title="<%- post.createdAt.toISOString() %>"></abbr></span>
+    <h3><a href="/read/<%= post.slug() %>"><%= post.title %></a></h3>
+    <p><%- post.content.substring(0, post.content.indexOf('</p>') - 1) %> <span><a href="/read/<%= post.slug() %>">... read more</a></span></p>
 </div>
 
 <% }); %>
