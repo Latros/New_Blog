@@ -9,7 +9,7 @@ module.exports = {
 
     homepage : function ( req, res ) {
 
-        Post.find().limit(5).sort('createdAt').exec( function foundPosts ( err, posts ){
+        Post.find().sort('createdAt').exec( function foundPosts ( err, posts ){
 
             res.locals.posts = posts.reverse();
 
@@ -38,7 +38,7 @@ module.exports = {
         }).exec( function foundPosts ( err, posts ) {
             res.locals.posts = posts.reverse();
             res.locals.category = req.param('category');
-            res.view('homepage');
+            res.view('category');
         });
     }
   

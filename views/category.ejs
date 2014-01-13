@@ -1,0 +1,11 @@
+<div class="alert alert-success">Viewing posts with category: <%= category.charAt(0).toUpperCase() + category.slice(1) %></div>
+
+<% _.each(posts, function(post) { %>
+
+<div class="post">
+    <span class="date">Posted <abbr class="timeago" title="<%- post.createdAt.toISOString() %>"></abbr></span>
+    <h3><a href="/read/<%= post.slug %>"><%= post.title %></a></h3>
+    <p><%- post.content.substring(0, post.content.indexOf('</p>') - 1) %> <span><a href="/read/<%= post.slug %>">... read more</a></span></p>
+</div>
+
+<% }); %>
