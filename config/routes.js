@@ -24,6 +24,10 @@ module.exports.routes = {
     view: 'links'
   },
 
+  '/post': {
+    cors: true
+  },
+
   'get /read/:slug': 'PostController.read',
   'get /category/:category': 'PostController.category'
 
