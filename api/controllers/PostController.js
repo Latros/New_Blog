@@ -9,7 +9,7 @@ module.exports = {
 
     homepage : function ( req, res ) {
 
-        Post.find().sort('createdAt').exec( function foundPosts ( err, posts ){
+        Post.find().sort('updatedAt').exec( function foundPosts ( err, posts ){
 
             res.locals.posts = posts.reverse();
 
