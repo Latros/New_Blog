@@ -6,6 +6,11 @@ jQuery(document).ready(function($) {
 
     resizeHeader();
 
+    // $('body').hide();
+    // $(window).load(function(){
+    //     $('body').fadeIn(100);
+    // });
+
 });
 
 function resizeHeader() {

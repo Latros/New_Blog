@@ -12,6 +12,10 @@ div.alert-success {
     margin-top: 20px;
 }
 
+div.gist-data.gist-syntax {
+    max-height: 400px;
+}
+
 // Header
 header {
     display: block;
@@ -133,6 +137,10 @@ section.blog-list {
         position: relative;
         padding-bottom: 35px;
 
+        ol, ul, li {
+            font-size: 16px;
+        }
+
         &:after {
             display: block;
             content: "";
@@ -191,6 +199,10 @@ section.blog-list {
             span {
                 display: inline-block;
                 font-weight: 800;
+            }
+
+            a {
+                text-decoration: underline !important;
             }
         }
 
